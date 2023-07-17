@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="643.0" prefWidth="962.0" style="-fx-background-image: url(petrolstation_577056808_1000.jpg);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.coursework_task_04.SearchFuelQueueController">
+   <children>
+      <ImageView fitHeight="687.0" fitWidth="962.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@istockphoto-171259711-612x612.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnBack" layoutX="750.0" layoutY="558.0" mnemonicParsing="false" onAction="#back" prefHeight="51.0" prefWidth="166.0" style="-fx-background-color: #2a52be;" text="Back" textFill="#2c262c">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Button>
+      <Label layoutX="174.0" layoutY="103.0" prefHeight="45.0" prefWidth="401.0" text="Enter your Vehicle Number">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSearch" layoutX="616.0" layoutY="112.0" onKeyTyped="#searchByVehNo" prefHeight="31.0" prefWidth="240.0" style="-fx-background-color: #446ccf;" />
+      <TableView fx:id="tblSearch" layoutX="27.0" layoutY="302.0" prefHeight="321.0" prefWidth="615.0" style="-fx-background-color: #6ca0dc;">
+        <columns>
+          <TableColumn prefWidth="139.0" text="First Name">
+              <cellValueFactory>
+                  <PropertyValueFactory property="firstName" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn prefWidth="176.0" text="Last Name">
+              <cellValueFactory>
+                  <PropertyValueFactory property="lastName" />
+              </cellValueFactory>
+          </TableColumn>
+            <TableColumn prefWidth="163.0" text="Vehicle Number">
+                <cellValueFactory>
+                    <PropertyValueFactory property="vehicleNumber" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="136.0" text="No: Of Litres">
+                <cellValueFactory>
+                    <PropertyValueFactory property="noOfLitres" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <Text fill="#29076b" layoutX="345.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Details">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="45.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
